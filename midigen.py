@@ -134,17 +134,17 @@ def save_genome_to_midi(filename: str, genome: Genome, num_bars: int, num_notes:
 
 
 @click.command()
-@click.option("--num-bars", default=8, prompt='Number of bars:', type=int)
-@click.option("--num-notes", default=4, prompt='Notes per bar:', type=int)
+@click.option("--num-bars", default=4, prompt='Number of bars:', type=int)
+@click.option("--num-notes", default=8, prompt='Notes per bar:', type=int)
 @click.option("--num-steps", default=1, prompt='Number of steps:', type=int)
-@click.option("--pauses", default=True, prompt='Introduce Pauses?', type=bool)
+@click.option("--pauses", default=False, prompt='Introduce Pauses?', type=bool)
 @click.option("--key", default="C", prompt='Key:', type=click.Choice(KEYS, case_sensitive=False))
 @click.option("--scale", default="major", prompt='Scale:', type=click.Choice(SCALES, case_sensitive=False))
-@click.option("--root", default=4, prompt='Scale Root:', type=int)
+@click.option("--root", default=5, prompt='Scale Root:', type=int)
 @click.option("--population-size", default=10, prompt='Population size:', type=int)
 @click.option("--num-mutations", default=2, prompt='Number of mutations:', type=int)
 @click.option("--mutation-probability", default=0.5, prompt='Mutations probability:', type=float)
-@click.option("--bpm", default=128, type=int)
+@click.option("--bpm", default=148, type=int)
 def main(num_bars: int, num_notes: int, num_steps: int, pauses: bool, key: str, scale: str, root: int,
          population_size: int, num_mutations: int, mutation_probability: float, bpm: int):
 
