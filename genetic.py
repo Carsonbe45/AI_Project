@@ -37,7 +37,7 @@ def single_point_crossover(a: Genome, b: Genome) -> Tuple[Genome, Genome]:
   p = randint(1, length - 1)
   return a[0:p] + b[p:], b[0:p] + a[p:]
 
-#mutates a genome at a random index if the generated num is less than the probability
+# mutates a genome at a random index if the generated num is less than the probability
 def mutation(genome: Genome, num: int = 1, probability: float = 0.5) -> Genome:
   for _ in range(num):
     index = randrange(len(genome))
